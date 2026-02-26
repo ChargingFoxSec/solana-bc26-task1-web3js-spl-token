@@ -1,0 +1,23 @@
+{
+    "name": "solana-workbench",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "remoteUser": "vscode",
+    "updateRemoteUserUID": true,
+    "forwardPorts": [8899, 8900],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh"
+            },
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "esbenp.prettier-vscode"
+            ]
+        }
+    }
+}
